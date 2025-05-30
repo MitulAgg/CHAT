@@ -1,0 +1,131 @@
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1e1e2f; /* Deep dark background */
+  color: #e0e0e0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.chat-header {
+  padding: 20px;
+  text-align: center;
+  background-color: #2a2a3b;
+  border-bottom: 1px solid #3a3a4d;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.chat-container {
+  flex: 1;
+  padding: 24px 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2e2e2e;
+  background-color: #1e1e2f;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.message {
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  padding: 16px;
+  border-radius: 12px;
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+.message-user {
+  background-color: #3a3a4d;
+  color: #e0e0e0;
+  align-self: flex-end;
+  margin-left: 40px;
+}
+
+.message-assistant {
+  background-color: #2a2a3b;
+  color: #ffffff;
+  align-self: flex-start;
+  margin-right: 40px;
+  border: 1px solid #3e3e50;
+}
+
+.message-paragraph {
+  margin: 0 0 8px 0;
+}
+
+.message-list {
+  margin: 8px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.message-list li {
+  margin-bottom: 5px;
+}
+
+/* In ChatPage.css */
+.chat-input-container {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #10a37f;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-button:hover {
+  background: #0e8f6e;
+}
+
+.form-button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}

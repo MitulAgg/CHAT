@@ -1,0 +1,70 @@
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #4b5563;
+  border-radius: 1.5rem;
+  background-color: #1f2937;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Focus state applies to entire input wrapper, matching full input box */
+.input-wrapper:focus-within {
+  border-color: #10a37f; /* ChatGPT green */
+  outline: none;         /* Remove native browser outline */
+}
+
+/* Optional: forcefully suppress textarea outline */
+.form-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.form-input {
+  flex: 1;
+  resize: none;
+  max-height: 200px;
+  padding: 0.5rem 3rem 0.75rem 0.75rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #f4f4f5;
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+.arrow-button {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #10a37f;
+  border: none;
+  border-radius: 9999px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.arrow-button:hover {
+  background: #0e8f6e;
+  transform: scale(1.05);
+}
