@@ -8,7 +8,7 @@ from google.adk.sessions import InMemorySessionService
 from dotenv import load_dotenv
 from typing import Dict
 from fastapi import APIRouter, FastAPI
-
+from ..services.test import run
 
 router = APIRouter(tags=["chatbot"])
 
@@ -62,10 +62,23 @@ async def continue_chat(request: ChatRequest):
         ChatResponse containing session_id, response, and current session state
     """
 
-    response_text=""
+    
     user_content = types.Content(
-        role="user", parts=[types.Part(text=request.message)]
-    )
+            role="user", 
+            parts=[types.Part(text=request.message)]
+        )
+    # if request.url:
+    #     urlText = run(request.url)
+    #     user_content = types.Content(
+    #         role="user", 
+    #         parts=[types.Part(text=f"{urlText}\n\n{request.message}")]
+    #     )
+    # else:
+    #     user_content = types.Content(
+    #         role="user", 
+    #         parts=[types.Part(text=request.message)]
+    #     )
+    response_text = ""
     
     for event in runner.run(
         user_id="default_user",  # You can replace this with a real user ID if needed
@@ -80,3 +93,4 @@ async def continue_chat(request: ChatRequest):
         response=response_text,
         session_state={}
     )
+
