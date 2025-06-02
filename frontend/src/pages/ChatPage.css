@@ -1,17 +1,39 @@
-.chat-page {
+/* Root container for the entire app */
+.app-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100vh;
   background-color: #121212; /* Deep dark background */
   color: #e0e0e0;
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* Left Section: Spline 3D Model */
+.spline-container {
+  width: 30%;
+  height: 80vh; /* Full height */
+  overflow: hidden; /* Prevent overflow */
+  background-color: #121212;
+  display: flex; /* Add flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Right Section: Chat */
+.chat-page {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
 .chat-header {
   display: flex;
   align-items: center;
   padding: 16px 20px;
-  background-color: #121212; /* Darker header bar */
+  background-color: #121212;
   border-bottom: 1px solid #2a2a3b;
   font-weight: 600;
   color: #ffffff;
@@ -87,7 +109,7 @@
   margin-bottom: 5px;
 }
 
-/* In ChatPage.css */
+/* Chat Input Container */
 .chat-input-container {
   background: transparent;
   border: none;
@@ -99,7 +121,6 @@
   display: flex;
   justify-content: center;
 }
-
 
 .form-input {
   flex: 1;
