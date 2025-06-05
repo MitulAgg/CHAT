@@ -4,5 +4,14 @@ uvicorn[standard]>=0.24.0
 google-adk>=1.0.0
 python-dotenv>=1.0.0
 uuid>=1.30
-crewai-tools<=0.1.16
 beautifulsoup4
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-community>=0.0.10
+transformers>=4.35.0
+torch>=2.0.0
+sentence-transformers>=2.2.2
+chromadb>=0.4.22
+huggingface-hub>=0.19.0
+langchain-huggingface
+langchain-google-genai

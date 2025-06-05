@@ -268,4 +268,4 @@ Next
 Google Cloud tools
 Copyright Google 2025
 Made with
-Material for MkDocs
+Material for 
