@@ -1,0 +1,63 @@
+/* make the wrapper a positioning context */
+.input-with-url {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.url-toggle-button {
+  /* remove top/translateY */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+
+  /* instead, align by bottom */
+  bottom: 0.003rem;       /* match your arrow-button’s bottom */
+  left: 0.1rem;        /* move it left enough so it doesn’t collide */
+  
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #10a37f;
+  border: none;
+  border-radius: 9999px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.url-toggle-button:hover {
+  background: #0e8f6e;
+  transform: scale(1.05);
+}
+
+
+/* bump right padding to clear space for both buttons */
+.form-input {
+  padding: 0.5rem 4.5rem 0.75rem 0.75rem;
+  /* …other existing styles… */
+}
+/* Style for URL input to match form aesthetics */
+.url-input {
+  flex: 1;
+  max-width: 200px; /* Or adjust based on your layout */
+  margin-left: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid #4b5563;
+  border-radius: 0.75rem;
+  color: #f4f4f5;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Focus state similar to main input */
+.url-input:focus {
+  border-color: #10a37f;
+  outline: none;
+  box-shadow: none;
+}
