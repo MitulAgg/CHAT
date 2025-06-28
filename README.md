@@ -36,33 +36,69 @@ Environment: python-dotenv
 
 📦 Installation & Setup
 
-Clone the repository
+Follow these steps to get both the backend and frontend up and running:
+
+1. Clone the Repository
 
 git clone https://github.com/MitulAgg/CHAT.git
-
 cd CHAT
+
+2. Backend Setup
+
+Navigate to the backend directory
+
+cd backend
 
 Create & activate a virtual environment
 
 python -m venv venv
-source venv/bin/activate   # Unix
-venv\\Scripts\\activate  # Windows
+# On macOS/Linux
+source venv/bin/activate
 
-Install dependencies
+# On Windows (PowerShell)
+.\venv\Scripts\Activate.ps1
+
+# On Windows (cmd)
+.\venv\Scripts\activate.bat
+
+Install Python dependencies
 
 pip install --upgrade pip
 pip install -r requirements.txt
 
-Set environment variables Create a .env file in the project root:
+Configure environment variables
+
+Create a .env file in the backend folder (if not already present):
 
 GOOGLE_API_KEY=your_google_api_key_here
 
-
-Run the application
+Start the FastAPI server
 
 uvicorn app.main:app --reload
 
-The API will be available at http://127.0.0.1:8000
+The backend API will be available at http://127.0.0.1:8000.
 
+3. Frontend Setup
 
+Navigate to the frontend directory
+
+cd ../frontend
+
+Install Node.js dependencies
+
+npm install
+
+Start the React application
+
+npm start
+
+The frontend will spin up on http://localhost:3000 by default and proxy API requests to the backend.
+
+🎉 Usage
+
+With both servers running, open your browser at http://localhost:3000.
+
+Interact with the chat UI to create sessions and send messages.
+
+Happy chatting!
 
