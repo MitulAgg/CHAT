@@ -82,7 +82,7 @@ The backend API will be available at http://127.0.0.1:8000.
 
 Navigate to the frontend directory
 
-cd ../frontend
+cd frontend
 
 Install Node.js dependencies
 
