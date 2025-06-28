@@ -39,6 +39,7 @@ Environment: python-dotenv
 Clone the repository
 
 git clone https://github.com/MitulAgg/CHAT.git
+
 cd CHAT
 
 Create & activate a virtual environment
