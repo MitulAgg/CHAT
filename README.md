@@ -41,6 +41,7 @@ Follow these steps to get both the backend and frontend up and running:
 1. Clone the Repository
 
 git clone https://github.com/MitulAgg/CHAT.git
+
 cd CHAT
 
 2. Backend Setup
@@ -52,18 +53,23 @@ cd backend
 Create & activate a virtual environment
 
 python -m venv venv
+
 # On macOS/Linux
+
 source venv/bin/activate
 
 # On Windows (PowerShell)
+
 .\venv\Scripts\Activate.ps1
 
 # On Windows (cmd)
-.\venv\Scripts\activate.bat
+
+.\venv\Scripts\activate
 
 Install Python dependencies
 
 pip install --upgrade pip
+
 pip install -r requirements.txt
 
 Configure environment variables
@@ -74,7 +80,7 @@ GOOGLE_API_KEY=your_google_api_key_here
 
 Start the FastAPI server
 
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 
 The backend API will be available at http://127.0.0.1:8000.
 
